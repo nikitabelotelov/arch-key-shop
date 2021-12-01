@@ -13,6 +13,7 @@ export class Order {
   }
   public async orderKeys(userId: number, keys: number[]): Promise<IBoughtKey[]> {
     const res = await proceedPayment()
+    // TODO Should work with software id's instead of key id's
     if (res === true) {
       const keysInfo = await this.resources.keys.fetchKeys(keys)
       await this.resources.keys.removeKeys(keys)
