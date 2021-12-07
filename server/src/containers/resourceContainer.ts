@@ -16,7 +16,7 @@ export class ResourceContainer {
     await client.connect()
     this.database = client.db(process.env.DB_NAME)
     this.software = new Software(this.database.collection<ISoftware>('Software'))
-    this.keys = new Keys(this.database.collection<IKey>('Key'))
+    this.keys = new Keys(client, this.database.collection<IKey>('Key'))
     this.boughtKeys = new BoughtKeys(this.database.collection<IBoughtKey>('BoughtKey'))
   }
 }
