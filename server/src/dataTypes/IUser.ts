@@ -1,7 +1,7 @@
 import { Document } from 'mongodb'
 
-export interface IKey extends Document {
+export interface IUser extends Document {
   Login: string
-  token: string
+  Hash: string
   ID: number
 }
