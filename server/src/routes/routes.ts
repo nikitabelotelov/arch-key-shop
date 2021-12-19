@@ -19,9 +19,6 @@ function initRoutes(services: ServiceContainer) {
   router.get('/signout', async (req, res) => {
     res.send('not implemented')
   })
-  router.get('/makeOrder', async (req, res) => {
-    res.send('not implemented')
-  })
   router.get('/getBoughtKeys', async (req, res) => {
     res.send('not implemented')
   })
