@@ -2,6 +2,7 @@ import * as dotenv from 'dotenv'
 import * as express from 'express'
 import { ResourceContainer } from './src/containers/resourceContainer'
 import { ServiceContainer } from './src/containers/serviceContainer'
+import { initRoutes } from './src/routes/routes'
 dotenv.config()
 
 const PORT = 3001

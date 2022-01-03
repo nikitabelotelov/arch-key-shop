@@ -1,7 +1,7 @@
 import {Router} from 'express';
 import { ServiceContainer } from '../containers/serviceContainer';
 
-function initRoutes(services: ServiceContainer) {
+export function initRoutes(services: ServiceContainer) {
   const router = Router();
   router.get('/fetchSoftware', async (req, res) => {
     const result = await services.catalog.fetchSoftware()
